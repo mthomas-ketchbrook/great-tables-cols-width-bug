@@ -1,5 +1,5 @@
 ```{python}
-from great_tables import GT, loc, style, md, exibble
+from great_tables import GT, style, exibble
 
 exibble_mini = exibble[["num", "char", "date", "datetime", "row"]].head(5)
 

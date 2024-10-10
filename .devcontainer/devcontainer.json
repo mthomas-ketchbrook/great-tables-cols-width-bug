@@ -1,5 +1,5 @@
 {
-	"name": "FCI KRI Report Automation",
+	"name": "Example Great Tables cols_width Bug",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"context": "../"

@@ -1,0 +1,21 @@
+```{python}
+from great_tables import GT, loc, style, md, exibble
+
+exibble_mini = exibble[["num", "char", "date", "datetime", "row"]].head(5)
+
+exibble_mini['long_text'] = 'Here is a really long sentence that I want to ensure is being handled appropriately by the cols_width argument, but I cannot get it to work unfortunately. I appreciate you taking the time to read this issue.'
+
+(
+    GT(exibble_mini)
+    .cols_hide(columns = 'datetime')
+    .cols_width(
+        cases={
+            "num": "50px",
+            "char": "50px",
+            "date": "50px",
+            "row": "50px",
+            "long_text": "400px"
+        }
+    )
+)
+```

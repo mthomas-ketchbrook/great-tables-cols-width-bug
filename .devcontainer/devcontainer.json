@@ -1,0 +1,33 @@
+{
+	"name": "FCI KRI Report Automation",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "../"
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+
+		// Install Quarto CLI
+		// More info: https://github.com/rocker-org/devcontainer-features/tree/main/src/quarto-cli
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+			"version": "1.5.57",
+			"installTinyTex": true
+		}
+
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Settings for VS Code.
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"quarto.quarto",
+				"ms-toolsai.jupyter"
+			]
+		}
+	}
+
+}
